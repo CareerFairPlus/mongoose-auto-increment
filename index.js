@@ -63,7 +63,8 @@ exports.plugin = function (schema, options) {
   // Add properties for field in schema.
   fields[settings.field] = {
     type: Number,
-    require: true
+    require: true,
+    sparse: settings.sparse
   };
   if (settings.field !== '_id')
     fields[settings.field].unique = settings.unique
